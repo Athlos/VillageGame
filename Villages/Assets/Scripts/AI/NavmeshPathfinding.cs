@@ -10,16 +10,11 @@ public class NavmeshPathfinding : Pathfinding
 
     [SerializeField]
     private NavMeshAgent m_agent = null;
-    private void Awake()
-    {
-        SetWaypoint();
-    }
 
-    public override void SetWaypoint()
+    public override void SetWaypoint(Vector3 pos)
     {
-        base.SetWaypoint();
+        base.SetWaypoint(pos);
 
-        m_waypointPos = m_waypoint.position;
         m_agent.destination = m_waypointPos;
     }
 }

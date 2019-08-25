@@ -7,15 +7,15 @@ public class Pathfinding : MonoBehaviour
 {
     protected Vector3 m_waypointPos = Vector3.zero;
 
-    public virtual void SetWaypoint()
+    public virtual void SetWaypoint(Vector3 pos)
     {
-
+        m_waypointPos = pos;
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
         Gizmos.DrawLine(transform.position, m_waypointPos);
-        Gizmos.DrawSphere(m_waypointPos, 0.5f);
+        Gizmos.DrawWireSphere(m_waypointPos, 0.3f);
     }
 }
