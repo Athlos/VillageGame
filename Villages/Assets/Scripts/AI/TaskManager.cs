@@ -35,7 +35,7 @@ public class TaskManager : MonoBehaviour
         GatherTask gatherResource = new GatherTask();
         gatherResource.SetResource(resource);
         gatherResource.Initialise(m_unit);
-        m_subTasks.Enqueue(goToResource);
+        m_subTasks.Enqueue(gatherResource);
 
         // Walk to drop off
         WalkTask goToDropoff = new WalkTask();

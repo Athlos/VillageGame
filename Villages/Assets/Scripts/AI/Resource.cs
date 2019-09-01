@@ -11,6 +11,10 @@ public class Resource : MonoBehaviour
     [SerializeField]
     private int m_resourceAmount = 0;
 
+    [SerializeField]
+    private GameObject m_resourceItemPrefab;
+    public GameObject ResourcePrefab { get { return m_resourceItemPrefab; } }
+
     private int m_currentResourceAmount = 0;
 
     private void Awake()

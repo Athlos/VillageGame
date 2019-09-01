@@ -21,7 +21,7 @@ public class GatherTask : Task
             ResourceAmount = resourceAmount
         };
 
-        m_unit.PickUpResource(newResourceItem);
+        m_unit.PickUpResource(newResourceItem, m_resource.ResourcePrefab);
         CompleteTask();
     }
 
